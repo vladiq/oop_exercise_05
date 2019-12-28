@@ -143,7 +143,7 @@ void list<T>::insert(const int& pos, const T& value) {
         insert(temp, value);
         return;
     }
-    while(i < pos) {
+    while (i < pos) {
         if (temp.ptr_ == nullptr) {
             break;
         }
@@ -197,6 +197,7 @@ void list<T>::erase(int pos) {
     if (temp.ptr_ == nullptr) {
         throw std::logic_error("Out of bounds");
     }
+    erase(temp);
 }
 
 template<class T>
